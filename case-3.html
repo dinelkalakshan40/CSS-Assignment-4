@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case-03</title>
+    <link rel="stylesheet" href="assets/normalize.css">
+    <style>
+
+        body {
+            overflow: hidden;
+        }
+
+        :root {
+            --width: 250px;
+            --height: 130px;
+        }
+
+        div {
+            width: var(--width);
+            height: var(--height);
+            background-color: greenyellow;
+            aspect-ratio: 2/1;
+            border-radius: 20px;
+
+            animation-name: animation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+
+        }
+
+        @keyframes animation {
+
+            0% {
+                margin-left: 0;
+                margin-top: 0;
+            }
+
+            25% {
+                margin-left: calc(100vw - var(--width));
+                margin-top: 0;
+                background-color: #ff253a;
+                transform: rotate(180deg);
+            }
+
+            50% {
+                margin-left: calc(100vw - var(--width));
+                margin-top: calc(100vh - var(--height));
+                background-color: aqua;
+                transform: rotate(0deg);
+            }
+
+            75% {
+                margin-top: calc(100vh - var(--height));
+                margin-right: calc(100vw - var(--width));
+                margin-left: 0;
+                background-color: pink;
+                transform: rotate(-180deg);
+            }
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+
+</body>
+</html>
